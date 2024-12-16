@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/perfilstyle.css">
+    <title>Perfil de Usuario</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Life & Health</div>
+            <nav>
+                <ul>
+                    <li><a href="medico_peticiones.html">Inicio</a></li>
+                    <li><a href="Chats.html">Chats</a></li>
+                    <li><a href="perfil_medico.html">Mi perfil</a></li>
+                    <li><a href="Main.html">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="../recursos/perfildoc.png" alt="Imagen de perfil">
+                    <button type="button" class="boton-avatar" aria-label="Cambiar imagen de perfil">
+                        <i class="far fa-image"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo" id="nombre-usuario">Nombre del Usuario</h3>
+                <p class="texto" id="correo-usuario">Correo del usuario</p>
+            </div>
+            <div class="perfil-usuario-footer">
+                <div class="perfil-usuario-datos">
+                    <div class="dato">
+                        <i class="icono fas fa-map-signs"></i>
+                        <span>Especialidad:</span>
+                        <span id="especialidad-usuario"></span>
+                    </div>
+                    <div class="dato">
+                        <i class="icono fas fa-certificate"></i>
+                        <span>Credenciales:</span>
+                        <span id="credenciales-usuario"></span>
+                    </div>
+                    <div class="dato">
+                        <i class="icono fas fa-venus-mars"></i>
+                        <span>Género:</span>
+                        <span id="genero-usuario"></span>
+                    </div>
+                    <div class="dato">
+                        <i class="icono fas fa-language"></i>
+                        <span>Idioma:</span>
+                        <span id="idioma-usuario"></span>
+                    </div>
+                    <div class="dato">
+                        <i class="icono fas fa-clock"></i>
+                        <span>Zona Horaria:</span>
+                        <span id="zona-horaria-usuario"></span>
+                    </div>
+                    <div class="dato">
+                        <i class="icono fas fa-phone"></i>
+                        <span>Teléfono:</span>
+                        <span id="telefono-usuario"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="editar-perfil">
+        <h2>Editar Perfil</h2>
+        <form id="form-editar-perfil">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" disabled>
+            <label for="especialidad">Especialidad:</label>
+            <input type="text" id="especialidad" name="especialidad">
+            <label for="credenciales">Credenciales:</label>
+            <textarea id="credenciales" name="credenciales"></textarea>
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero">
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+            </select>
+            <label for="idioma">Idioma:</label>
+            <input type="text" id="idioma" name="idioma">
+            <label for="zona-horaria">Zona Horaria:</label>
+            <input type="text" id="zona-horaria" name="zona-horaria">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono">
+            <label for="horas-cancelacion">Horas de Cancelación:</label>
+            <input type="number" id="horas-cancelacion" name="horas-cancelacion" min="0">
+            <label for="max-wait-time">Tiempo Máximo de Espera (minutos):</label>
+            <input type="number" id="max-wait-time" name="max-wait-time" min="0">
+            
+            <button type="submit">Guardar Cambios</button>
+        </form>
+    </section>
+
+    <section class="editar-horarios">
+        <h2>Horarios de Atención</h2>
+        <div id="horarios-container">
+            <!-- Los horarios se cargarán aquí -->
+        </div>
+        <h4>Agregar Nuevo Horario</h4>
+        <form id="addScheduleForm">
+            <label for="dayOfWeek">Día de la Semana:</label>
+            <select id="dayOfWeek" name="day_of_week" required>
+                <option value="Monday">Lunes</option>
+                <option value="Tuesday">Martes</option>
+                <option value="Wednesday">Miércoles</option>
+                <option value="Thursday">Jueves</option>
+                <option value="Friday">Viernes</option>
+                <option value="Saturday">Sábado</option>
+                <option value="Sunday">Domingo</option>
+            </select>
+            <label for="startTime">Hora de Inicio:</label>
+            <input type="time" id="startTime" name="start_time" required>
+            <label for="endTime">Hora de Fin:</label>
+            <input type="time" id="endTime" name="end_time" required>
+            <button type="button" id="addScheduleButton">Agregar Horario</button>
+        </form>
+    </section>
+
+    <section class="cambiar-contrasena">
+        <h2>Cambiar Contraseña</h2>
+        <form id="form-cambiar-contrasena">
+            <label for="contrasena-actual">Contraseña Actual:</label>
+            <input type="password" id="contrasena-actual" name="contrasena_actual" required>
+            
+            <label for="nueva-contrasena">Nueva Contraseña:</label>
+            <input type="password" id="nueva-contrasena" name="nueva_contrasena" required>
+            
+            <label for="confirmar-contrasena">Confirmar Nueva Contraseña:</label>
+            <input type="password" id="confirmar-contrasena" name="confirmar_contrasena" required>
+            
+            <button type="submit">Cambiar Contraseña</button>
+        </form>
+    </section>
+
+    <script src="../js/perfil_medico.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Citas</title>
+  <link rel="stylesheet" href="../css/miscitas.css">
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+  <style>
+    .notification-dot {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Life & Health</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="buscar_medicos.html">Buscar Médicos</a></li>
+          <li style="position: relative;">
+            <a href="notificaciones.html">Notificaciones</a>
+            <div id="notification-dot" class="notification-dot" style="display: none;"></div>
+          </li>
+          <li><a href="historial_consultas.html">Historial de Citas</a></li>
+          <li><a href="miscitas.html">Citas Programadas</a></li>
+          <li><a href="perfil_usuario.html">Perfil</a></li>
+          <li><a href="Main.html">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="citas-section">
+    <h1>Mis Citas</h1>
+    <div id="citas"></div>
+  </section>
+  <!-- Modal para el chat -->
+  <div id="chatModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="delete-button"><ion-icon name="trash-bin-outline"></ion-icon></button>
+        <span class="close">&times;</span>
+        <h2>Chat con el Médico</h2>
+      </div>
+      <div class="modal-body">
+        <div id="chatMessages" class="chat-messages"></div>
+        <form id="chatForm">
+          <input type="hidden" id="chatCitaId" name="cita_id">
+          <textarea id="chatMessage" name="message" placeholder="Escribe tu mensaje..." required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../js/miscitas.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('../php/obtener_notificaciones.php')
+            .then(response => response.json())
+            .then(data => {
+                const unreadCount = data.unreadCount;
+                const notificationDot = document.getElementById('notification-dot');
+
+                // Mostrar el punto de notificación si hay notificaciones no leídas
+                if (unreadCount > 0) {
+                    notificationDot.style.display = 'block';
+                } else {
+                    notificationDot.style.display = 'none';
+                }
+            })
+            .catch(error => {
+                console.error("Error al obtener las notificaciones:", error);
+            });
+    });
+  </script>
+</body>
+</html>

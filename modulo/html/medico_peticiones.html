@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Peticiones de Citas</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Life & Health</div>
+            <nav>
+                <ul>
+                    <li><a href="medico_peticiones.html">Inicio</a></li>
+                    <li><a href="Chats.html">Chats</a></li>
+                    <li><a href="perfil_medico.html">Mi perfil</a></li>
+                    <li><a href="Main.html">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>Gestión de Peticiones de Citas</h1>
+    <button id="filterButton">Filtrar Citas</button>
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Filtrar Citas</h2>
+            <button class="filter-option" data-status="all">Todas</button>
+            <button class="filter-option" data-status="pending">Pendientes</button>
+            <button class="filter-option" data-status="confirmed">Aceptadas</button>
+            <button class="filter-option" data-status="cancelled">Canceladas</button>
+            <button class="filter-option" data-status="completed">Completadas</button>
+        </div>
+    </div>
+    <div id="peticiones"></div>
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Tu Hospital Digital</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://x.com/?lang=es" target="_blank" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/medico.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

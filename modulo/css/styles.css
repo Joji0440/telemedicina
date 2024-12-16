@@ -1,0 +1,450 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #3647db;
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #2c3e9e;
+}
+
+.navbar .btn {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .btn:hover {
+    background-color: #003d80;
+    color: #fff;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #e9f5ff;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #3647db;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.hero-text .btn {
+    margin-top: 20px;
+    padding: 0.75rem 1.5rem;
+    background-color: #3647db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-text .btn:hover {
+    background-color: #2c3e9e;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 400px; /* Ajustar el tamaño máximo de la imagen */
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #3647db;
+    color: #fff;
+    margin-top: auto; /* Empuja el footer al final de la página */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container p {
+    margin: 0;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+    color: #2c3e9e;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+/* Botones */
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.accept-button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+
+.accept-button:hover {
+    background-color: #45a049;
+}
+
+.cancel-button {
+    background-color: #f44336; /* Rojo */
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #da190b;
+}
+
+.complete-button {
+    background-color: #008CBA; /* Azul */
+    color: white;
+}
+
+.complete-button:hover {
+    background-color: #007bb5;
+}
+
+.delete-button {
+    background-color: #e7e7e7; /* Gris */
+    color: black;
+}
+
+.delete-button:hover {
+    background-color: #d6d6d6;
+}
+
+.forum-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.forum-section h2 {
+    text-align: center;
+    color: #3647db;
+    margin-bottom: 2rem;
+}
+
+#comments-container {
+    margin-bottom: 2rem;
+}
+
+.comment {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment .comment-text {
+    margin-bottom: 0.5rem;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+    color: #3647db;
+}
+.comment .admin-author {
+    font-weight: bold;
+    color: #29d85e;
+}
+
+.comment .comment-reply {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #555;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.comment-text {
+    margin: 5px 0;
+}
+
+.admin-response {
+    background-color: #e9f5ff;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 5px solid #0056b3;
+    border-radius: 5px;
+}
+
+.admin-author {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.admin-text {
+    margin: 5px 0;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#commentForm textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#commentForm button {
+    background-color: #3647db;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#commentForm button:hover {
+    background-color: #2c3e9e;
+}
+
+/* Colores de estado de las citas */
+.card.pending {
+    border-left: 5px solid #ffeb3b; /* Amarillo */
+}
+
+.card.accepted {
+    border-left: 5px solid #4CAF50; /* Verde */
+}
+
+.card.cancelled {
+    border-left: 5px solid #f44336; /* Rojo */
+}
+
+.card.completed {
+    border-left: 5px solid #008CBA; /* Azul */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo */
+    background-color: rgba(0,0,0,0.4); /* Fondo con opacidad */
+}
+
+/* Contenido del Modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px; /* Ancho máximo del modal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra */
+}
+
+/* Botón de cierre */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botones de filtro */
+.filter-option {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #3647db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.filter-option:hover {
+    background-color: #2a36a3;
+}
+
+/* Estilos para las tarjetas de citas según el estado */
+.card.pending {
+    background-color: #f0f0f0; /* Gris */
+}
+
+.card.confirmed {
+    background-color: #d4edda; /* Verde */
+}
+
+.card.cancelled {
+    background-color: #f8d7da; /* Rojo */
+}
+
+.card.completed {
+    background-color: #d1ecf1; /* Azul */
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.print-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: #ffd700;
+}

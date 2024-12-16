@@ -1,0 +1,290 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3647db;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #2c3e9e;
+    color: #fff;
+}
+
+/* Perfil de Usuario */
+.perfil-usuario {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.perfil-usuario-header {
+    position: relative;
+    background-color: #3647db;
+    height: 200px; /* Ajustar la altura para que no tape el nombre */
+}
+
+.perfil-usuario-portada {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.perfil-usuario-avatar {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
+
+.perfil-usuario-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boton-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boton-portada {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+.perfil-usuario-body {
+    padding: 2rem;
+    padding-top: 4rem; /* Añadir espacio adicional para que los datos no se superpongan con la imagen */
+}
+
+.perfil-usuario-bio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.perfil-usuario-bio .titulo {
+    font-size: 1.5rem;
+    color: #3647db;
+}
+
+.perfil-usuario-bio .texto {
+    font-size: 1rem;
+    color: #666;
+}
+
+.perfil-usuario-footer {
+    padding: 2rem;
+}
+
+.perfil-usuario-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dato {
+    flex: 1 1 calc(50% - 1rem);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dato .icono {
+    font-size: 1.5rem;
+    color: #3647db;
+}
+
+/* Editar Perfil */
+.editar-perfil, .editar-horarios, .cambiar-contrasena {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.editar-perfil h2, .editar-horarios h2, .cambiar-contrasena h2 {
+    text-align: center;
+    color: #3647db;
+    margin-bottom: 2rem;
+}
+
+.editar-perfil form, .editar-horarios form, .cambiar-contrasena form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.editar-perfil label, .editar-horarios label, .cambiar-contrasena label {
+    font-weight: bold;
+    color: #3647db;
+}
+
+.editar-perfil input, .editar-perfil select, .editar-perfil textarea, .editar-horarios input, .editar-horarios select, .cambiar-contrasena input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.editar-perfil button, .editar-horarios button, .cambiar-contrasena button {
+    background-color: #3647db;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.editar-perfil button:hover, .editar-horarios button:hover, .cambiar-contrasena button:hover {
+    background-color: #2c3e9e;
+}
+
+#horarios-container {
+    margin-bottom: 2rem;
+}
+
+.horario {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horario .horario-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.horario .horario-acciones {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.horario .horario-acciones button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.horario .horario-acciones button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Cambiar Contraseña */
+.cambiar-contrasena {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.cambiar-contrasena h2 {
+    text-align: center;
+    color: #3647db;
+    margin-bottom: 2rem;
+}
+
+.cambiar-contrasena form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cambiar-contrasena label {
+    font-weight: bold;
+    color: #3647db;
+}
+
+.cambiar-contrasena input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cambiar-contrasena button {
+    background-color: #3647db;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cambiar-contrasena button:hover {
+    background-color: #2c3e9e;
+}

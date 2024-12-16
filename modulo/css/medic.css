@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#loginForm button {
+    background-color: #28a745; /* Verde */
+}
+
+#registerButton {
+    margin-top: 20px;
+    background-color: #007BFF; /* Azul */
+}
+
+#registerButton:hover {
+    background-color: #0056b3;
+}
+
+#registerForm button {
+    background-color: #007BFF; /* Azul */
+}
+
+#registerForm button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espacio entre filas */
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+td input[type="time"] {
+    width: 48%; /* Ajuste para espacio entre campos de tiempo */
+    margin-right: 4%;
+}
+
+td input[type="time"]:last-child {
+    margin-right: 0;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1eff;
+    color: white;
+    height: 5px;
+    padding: 5px 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1eff;
+    color: white;
+    padding: 2% 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil si deseas */
+
+}
+.Header {
+    align-items: center;
+    position: fixed;
+    padding: 5% ;
+    width: 100%;
+}

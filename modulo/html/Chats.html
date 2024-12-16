@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chats Activos</title>
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Life & Health</div>
+            <nav>
+                <ul>
+                    <li><a href="medico_peticiones.html">Inicio</a></li>
+                    <li><a href="chats.html">Chats</a></li>
+                    <li><a href="perfil_medico.html">Mi perfil</a></li>
+                    <li><a href="Main.html">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="chats-section">
+        <h1>Chats Activos</h1>
+        <div id="chats"></div>
+    </section>
+
+    <!-- Modal para el chat -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Chat con el Paciente</h2>
+            <div id="chatMessages" class="chat-messages"></div>
+            <form id="chatForm">
+                <input type="hidden" id="chatCitaId" name="cita_id">
+                <textarea id="chatMessage" name="message" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para la receta médica -->
+    <div id="recetaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Emitir Receta Médica</h2>
+            <form id="recetaForm">
+                <textarea id="recetaTexto" name="receta" placeholder="Escribe la receta médica..." required></textarea>
+                <button type="button" id="generarRecetaButton">Generar PDF</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/chat.js"></script>
+</body>
+</html>

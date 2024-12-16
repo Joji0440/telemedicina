@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="../css/Main.css">
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Life & Health</div>
+      <nav>
+        <ul>
+          <li><a href="Main.html">Inicio</a></li>
+          <li><a href="User_Inicio_Sesion.html">Iniciar Sesión Usuario</a></li>
+          <li><a href="Med_Inicio_Sesion.html">Iniciar Sesión Médico</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Tu Plataforma de Telemedicina</h1>
+        <p>Configura un entorno de salud digital a la medida de tus necesidades</p>
+        <p>
+          Contamos con médicos y especialistas capacitados para consultas de Telemedicina
+          siempre enfocándonos en el paciente.
+        </p>
+        <a class="btn" href="User_Inicio_Sesion.html">Registrarse</a>
+      </div>
+      <div class="hero-image">
+        <img src="../recursos/doctor.png" alt="Doctor Sonriente">
+      </div>
+    </section>
+    <div class="container">
+      <div class="admin-bubble" id="adminBubble"><ion-icon name="code-working-outline"></ion-icon></div>
+      <div class="admin-form-container" id="adminFormContainer">
+          <h2>Admin Login<ion-icon name="construct-outline"></ion-icon></h2>
+          <form id="adminLoginForm">
+              <label for="adminUser">Usuario:</label>
+              <input type="text" id="adminUser" name="adminUser" required>
+              <label for="adminPassword">Contraseña:</label>
+              <input type="password" id="adminPassword" name="adminPassword" required>
+              <button type="submit">Iniciar Sesión</button>
+          </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2024 Tu Hospital Digital</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><ion-icon
+                    name="logo-facebook"></ion-icon></a>
+                <a href="https://x.com/?lang=es" target="_blank" aria-label="Twitter"><ion-icon
+                        name="logo-twitter"></ion-icon></a>
+                <a href="https://www.instagram.com/?hl=es" target="_blank" aria-label="Instagram"><ion-icon
+                        name="logo-instagram"></ion-icon></a>
+        </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
